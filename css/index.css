@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: 'Monserrat';
-  src: url('/fonts/Monserrat.woff');
+  src: url('../fonts/Montserrat/Montserrat-Regular.woff');
   font-weight: 400;
 }
 
@@ -10,6 +10,15 @@ body {
 }
 
 nav {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.section-title {
   text-transform: uppercase;
 }
 
