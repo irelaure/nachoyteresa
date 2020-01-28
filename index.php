@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 
-  <link rel='stylesheet' href='/js/bootstrap.min.css' media='screen'>
-  <link rel='stylesheet' href='/tools/font-awesome.min.css?v=1.1' media='screen'>
+  <link rel='stylesheet' href='/css/bootstrap.min.css' media='screen'>
+  <link rel='stylesheet' href='/css/index.css' media='screen'>
+  <!-- <link rel='stylesheet' href='/tools/font-awesome.min.css?v=1.1' media='screen'> -->
 
   <script src='/js/jquery-3.4.1.min.js'></script>
   <script src='/js/bootstrap.bundle.min.js'></script>
@@ -17,3 +18,9 @@
   
 </body>
 </html>
+
+
+<div class=''>
+  <div class='container'>
+  </div>
+</div>

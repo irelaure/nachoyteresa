@@ -1,0 +1,10 @@
+
+@font-face {
+  font-family: 'Monserrat';
+  src: url('/fonts/Monserrat.woff');
+  font-weight: 400;
+}
+
+body {
+  font-family: 'Monserrat';
+}
