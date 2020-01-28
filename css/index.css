@@ -8,3 +8,11 @@
 body {
   font-family: 'Monserrat';
 }
+
+nav {
+  text-transform: uppercase;
+}
+
+.gray {
+  background-color: #eee;
+}
