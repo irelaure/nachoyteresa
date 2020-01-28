@@ -10,7 +10,7 @@
   <link rel="icon" media="(prefers-color-scheme:dark)" href="favicon-dark.ico" type="image/png" />
   <link rel="icon" media="(prefers-color-scheme:light)" href="favicon-light.ico" type="image/png" />
 
-  <link rel='stylesheet' href='css/bootstrap.min.css' media='screen'>
+  <link rel='stylesheet' href='css/bootstrap.min.css' media='screen' id="bootstrap-css">
   <link rel='stylesheet' href='css/index.css' media='screen'>
 
   <script src='js/jquery-3.4.1.min.js'></script>
@@ -33,7 +33,7 @@
       <div class='container-fluid'>
         <div class='row align-items-center justify-content-center'>
           <div class="col-12 pt-3 pt-sm-0 col-sm-auto navbar-nav">
-            <a class="nav-item nav-link my-2 my-sm-0 mx-3 active" href="ceremonia">Ceremonia<span
+            <a class="nav-item nav-link my-2 my-sm-0 mx-3" href="ceremonia">Ceremonia<span
                 class="sr-only">(current)</span></a>
             <a class="nav-item nav-link my-2 my-sm-0 mx-3" href="#celebracion">Celebración</a>
             <a class="nav-item nav-link my-2 my-sm-0 mx-3" href="#alojamiento">Alojamiento</a>
@@ -55,7 +55,7 @@
     <div class="container py-5">
       <div class='row'>
         <div class='col-12 pb-5 text-center'>
-          <h2>LA CEREMONIA (HORA, CÓMO LLEGAR)</h2>
+          <h2>LA CEREMONIA</h2>
         </div>
         <div class='col-12 text-center'>
           <p>Iglesia San Manuel y San Benito</p>
@@ -73,7 +73,8 @@
           <h2>LA CELEBRACIÓN</h2>
         </div>
         <div class='col-12 text-center'>
-          <a href="https://grupomonico.com/fincas-para-bodas/canada-de-monico/"><img id="monico" class='pb-5' src="images/Monico.png" alt=""></a>
+          <a href="https://grupomonico.com/fincas-para-bodas/canada-de-monico/"><img id="monico" class='pb-5'
+              src="images/Monico.png" alt=""></a>
           <p>Finca la Cañada de Mónico</p>
           <p>Km. 1,600, M-533 Peralejo</p>
           <p>28211 Madrid, España</p>
@@ -100,9 +101,9 @@
           <p>28009 Madrid, España</p>
           <a href="https://goo.gl/maps/eFQ9HiHdSj92FGrq9"><i class="fas fa-map-marker-alt"> </i> Ver mapa</a>
         </div>
-        </div>
       </div>
     </div>
+  </div>
   </div>
   <div id='regalos' class='gray'>
     <div class="container py-5">
@@ -145,7 +146,7 @@
           <p>+34 612 321 213</p>
           <p>nacho@calomarde.com</p>
         </div>
-        <div class='col-7 py-5 text-center'>
+        <div class='col-7 py-5 text-center controls'>
           <form>
             <div class="form-group">
               <input type="email" class="form-control rounded-0 " id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -156,28 +157,56 @@
             <div class='invite row'>
               <div class='col-12 col-sm-6 py-3'>
                 <div class="form-group mb-0">
-                  <input type="email" class="form-control rounded-0 " id="exampleInputEmail1"
-                    aria-describedby="emailHelp" placeholder="Nombre">
+                  <input type="text" class="form-control" id="nombreTitular" placeholder="Nombre">
                 </div>
               </div>
               <div class='col-12 col-sm-6 py-3'>
                 <div class="form-group mb-0">
-                  <input type="email" class="form-control rounded-0 " id="exampleInputEmail1"
-                    aria-describedby="emailHelp" placeholder="Apellido">
+                  <input type="text" class="form-control" id="apellidoTitular" placeholder="Apellidos">
                 </div>
+              </div>
+
+              <div class="form-check mb-0">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Servicio de traslado en autobús
+                </label>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-sm-6 py-3">
+                  <div class="form-group mb-0">
+                    <input type="text" class="form-control" id="nombreInvitado" placeholder="Nombre Acompañante">
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 py-3">
+                  <div class="form-group mb-0">
+                    <input type="text" class="form-control" id="apellidoInvitado" placeholder="Apellidos Acompañante">
+                  </div>
+                </div>
+                <span class="input-group-btn col-12 col-sm-1">
+                  <button class="btn btn-success btn-add" type="button">
+                    <span class="glyphicon glyphicon-plus">+</span>
+                  </button>
+                </span>
               </div>
             </div>
 
-<!--
+            <div class='col-12 col-sm-12 py-3'>
+              <div class="form-group mb-0">
+                <label for="textAlergias">Escríbenos aquí si tienes alguna alergia o necesidad de un menú
+                  especial</label>
+                <textarea class="form-control" id="textAlergias"
+                  placeholder="Alergia so necesidad de menú especial"> </textarea>
+              </div>
+            </div>
+
+
+            <!--
             nombre
             apellidos
             invitado +
 -->
-
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
             <button type="submit" class="btn btn-primary rounded-0 mt-3">Enviar</button>
           </form>
         </div>
