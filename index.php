@@ -9,7 +9,7 @@
   <link rel='stylesheet' href='/js/bootstrap.min.css' media='screen'>
   <link rel='stylesheet' href='/tools/font-awesome.min.css?v=1.1' media='screen'>
 
-  <script src='/tools/jquery-1.11.2.min.js'></script>
+  <script src='/js/jquery-3.4.1.min.js'></script>
   <script src='/js/bootstrap.bundle.min.js'></script>
     
 </head>
