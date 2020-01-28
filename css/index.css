@@ -27,7 +27,16 @@ h2 {
   background-color: #eee;
 }
 
+.btn {
+  background-color: #42bcc9;
+  border-color: #42bcc9;
+}
+
 footer {
   color: white;
   background-color: #282828;
+}
+
+.invite {
+  background-color: #ffe4a5;
 }
