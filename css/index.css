@@ -9,7 +9,7 @@ body {
   font-family: 'Monserrat';
 }
 
-nav {
+header {
   text-transform: uppercase;
 }
 
@@ -24,4 +24,9 @@ h2 {
 
 .gray {
   background-color: #eee;
+}
+
+footer {
+  color: white;
+  background-color: #282828;
 }
