@@ -12,67 +12,72 @@
 
   <script src='js/jquery-3.4.1.min.js'></script>
   <script src='js/bootstrap.bundle.min.js'></script>
+  <script src='js/index.js'></script>
 
 </head>
 
 <body>
-
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Ceremonia</a>
-          <a class="nav-item nav-link" href="#">Celebración</a>
-          <a class="nav-item nav-link" href="#">Alojamiento</a>
-          <a class="nav-item nav-link" href="#">Lista de Boda</a>
-          <a class="nav-item nav-link" href="#">Contacto</a>
-          <a class="nav-item nav-link disabled" href="#">Disabled</a>
-        </div>
+  <header class="navbar navbar-expand-lg navbar-light bg-light sticky-top align-items-center">
+    <!-- <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav align-items-center m-auto">
+        <a class="nav-item nav-link mx-3 active" href="body">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link mx-3" href="#ceremonia">Ceremonia</a>
+        <a class="nav-item nav-link mx-3" href="#celebracion">Celebración</a>
+        <a class="nav-item nav-link mx-3" href="body"><img src="images/logo.png" alt="logo de la web" width='60px'></a>
+        <a class="nav-item nav-link mx-3" href="#alojamiento">Alojamiento</a>
+        <a class="nav-item nav-link mx-3" href="#regalos">Lista de Boda</a>
+        <a class="nav-item nav-link mx-3" href="#contacto">Contacto</a>
       </div>
-    </nav>
+    </div>
   </header>
   <div id='ceremonia' class=''>
     <div class="container py-5">
       <div class='row'>
-        <div class='col-12'>LA CEREMONIA (HORA, CÓMO LLEGAR)</div>
+        <div class='col-12 py-5'>LA CEREMONIA (HORA, CÓMO LLEGAR)</div>
       </div>
     </div>
   </div>
   <div id='celebracion' class='gray'>
     <div class="container py-5">
       <div clasS='row'>
-        <div class='col-12'>LA CELEBRACIÓN ( CÓMO LLEGAR, INFORMAR</div>
+        <div class='col-12 py-5'>LA CELEBRACIÓN ( CÓMO LLEGAR, INFORMAR</div>
       </div>
     </div>
   </div>
   <div id='alojamiento' class=''>
     <div class="container py-5">
       <div class='row'>
-        <div class='col-12'>ALOJAMIENTO</div>
+        <div class='col-12 py-5'>ALOJAMIENTO</div>
       </div>
     </div>
   </div>
   <div id='regalos' class='gray'>
     <div class="container py-5">
       <div class='row'>
-        <div class='col-12'>LISTA DE REGALOS</div>
+        <div class='col-12 py-5'>LISTA DE REGALOS</div>
       </div>
     </div>
   </div>
   <div id='contacto' class=''>
     <div class="container py-5">
       <div class='row'>
-        <div class='col-12'>CONTACTO</div>
+        <div class='col-12 py-5'>CONTACTO</div>
       </div>
     </div>
   </div>
 
+  <footer>
+    <div class='container'>
+      <div class='row'>
+        <div class='col my-5'>© 2020 Nacho y Teresa. All rights reserved</div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 

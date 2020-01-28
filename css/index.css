@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: 'Monserrat';
-  src: url('/fonts/Monserrat.woff');
+  src: url('fonts/Montserrat/Montserrat-regular.woff');
   font-weight: 400;
 }
 
@@ -9,10 +9,15 @@ body {
   font-family: 'Monserrat';
 }
 
-nav {
+header {
   text-transform: uppercase;
 }
 
 .gray {
   background-color: #eee;
+}
+
+footer {
+  color: white;
+  background-color: #282828;
 }
