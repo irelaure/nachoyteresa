@@ -17,6 +17,7 @@ header {
 h2 {
   font-size: 1rem;
   text-align: center;
+  font-style: bold;
 }
 
 .section-title {
@@ -32,11 +33,35 @@ h2 {
   border-color: #42bcc9;
 }
 
+.btn:hover{
+  background-color: #008793;
+  border-color: #008793;
+}
+
+ a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover 
+{
+   color: rgba(0,0,0,.5); 
+   text-decoration:none; 
+   cursor:pointer;  
+}
+
+#wedshoots {
+  width: 10em;
+}
+
+#elcorteingles {
+  width: 10em;
+}
+
 footer {
   color: white;
   background-color: #282828;
 }
 
 .invite {
-  background-color: #ffe4a5;
 }
