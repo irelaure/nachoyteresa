@@ -15,41 +15,43 @@
 
   <script src='js/jquery-3.4.1.min.js'></script>
   <script src='js/bootstrap.bundle.min.js'></script>
-  <script src='js/index.js'></script>
+  <script src='js/index.js?v=1.1'></script>
   <script src="https://kit.fontawesome.com/ac79f6b96e.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
 
-  <header class="navbar navbar-expand-lg navbar-light bg-light sticky-top align-items-center">
-    <a class="navbar-brand d-sm-none" href="body"><img src="images/logo.png" alt="logo de la web" width='40px'
-        class='mr-2'><span>Nacho y Teresa</span></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class='container-fluid'>
-        <div class='row align-items-center justify-content-center'>
-          <div class="col-12 pt-3 pt-sm-0 col-sm-auto navbar-nav">
-            <a class="nav-item nav-link my-2 my-sm-0 mx-3" href="ceremonia">Ceremonia<span
-                class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link my-2 my-sm-0 mx-3" href="#celebracion">Celebración</a>
-            <a class="nav-item nav-link my-2 my-sm-0 mx-3" href="#alojamiento">Alojamiento</a>
-          </div>
-          <div class='col-1 text-center my-2 d-none d-sm-inline'>
-            <img src="images/logo.png" alt="logo de la web" width='70px'>
-          </div>
-          <div class="col-12 pb-3 pb-sm-0 col-sm-auto navbar-nav">
-            <a class="nav-item nav-link my-2 my-sm-0 mx-3" href="#regalos">Lista de Boda</a>
-            <a class="nav-item nav-link my-2 my-sm-0 mx-3" href="#galeria">Galería</a>
-            <a class="nav-item nav-link my-2 my-sm-0 mx-3" href="#contacto">Contacto</a>
-          </div>
+  <nav id='header' class="navbar navbar-expand-md navbar-light bg-light sticky-top align-items-center">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item my-2 my-sm-0 mx-3"><a class="nav-link" href="#ceremonia">Ceremonia</a></li>
+        <li class="nav-item my-2 my-sm-0 mx-3"><a class="nav-link" href="#celebracion">Celebración</a></li>
+        <li class="nav-item my-2 my-sm-0 mx-3"><a class="nav-link" href="#alojamiento">Alojamiento</a></li>
+      </ul>
+    </div>
+    <div class="col-12 col-sm-1">
+      <div class='row align-items-center'>
+        <a class="navbar-brand mr-auto mx-sm-auto my-2 text-center" href="body">
+          <img src="images/logo.png" alt="logo de la web" width='70px' class='d-none d-sm-inline mr-2 mx-sm-3'>
+          <img src="images/logo.png" alt="logo de la web" width='40px' class='d-inline d-sm-none mr-2 mx-sm-3'>
+          <span class='d-inline d-sm-none'>Nacho y Teresa</span>
+        </a>
+        <div class='col-auto d-sm-none'>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
       </div>
     </div>
-  </header>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item my-2 my-sm-0 mx-3"><a class="nav-link" href="#regalos">Lista de Boda</a></li>
+        <li class="nav-item my-2 my-sm-0 mx-3"><a class="nav-link" href="#galeria">Galería</a></li>
+        <li class="nav-item my-2 my-sm-0 mx-3"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <div id='ceremonia' class=''>
     <div class="container py-5">
@@ -136,80 +138,48 @@
         <div class='col-12 py-5'>
           <h2>CONTACTO</h2>
         </div>
-        <div class='col-12 col-sm-3 text-center'>
+        <div class='col-6 col-sm-3 text-center'>
           <p>Teresa Cabrera</p>
           <p>+34 612 321 213</p>
           <p>teresa@cabrera.com</p>
         </div>
-        <div class='col-12 col-sm-3 text-center'>
+        <div class='col-6 col-sm-3 text-center'>
           <p>Nacho Calomarde</p>
           <p>+34 612 321 213</p>
           <p>nacho@calomarde.com</p>
         </div>
-        <div class='col-7 py-5 text-center controls'>
-          <form>
-            <div class="form-group">
+        <form class='col-12 text-center'>
+          <div class='form-row'>
+            <div class="form-group col-12">
               <input type="email" class="form-control rounded-0 " id="exampleInputEmail1" aria-describedby="emailHelp"
                 placeholder="Enter email">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
-
-            <div class='invite row'>
-              <div class='col-12 col-sm-6 py-3'>
-                <div class="form-group mb-0">
-                  <input type="text" class="form-control" id="nombreTitular" placeholder="Nombre">
-                </div>
-              </div>
-              <div class='col-12 col-sm-6 py-3'>
-                <div class="form-group mb-0">
-                  <input type="text" class="form-control" id="apellidoTitular" placeholder="Apellidos">
-                </div>
-              </div>
-
-              <div class="form-check mb-0">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                  Servicio de traslado en autobús
-                </label>
-              </div>
-
-              <div class="row">
-                <div class="col-12 col-sm-6 py-3">
-                  <div class="form-group mb-0">
-                    <input type="text" class="form-control" id="nombreInvitado" placeholder="Nombre Acompañante">
-                  </div>
-                </div>
-                <div class="col-12 col-sm-6 py-3">
-                  <div class="form-group mb-0">
-                    <input type="text" class="form-control" id="apellidoInvitado" placeholder="Apellidos Acompañante">
-                  </div>
-                </div>
-                <span class="input-group-btn col-12 col-sm-1">
-                  <button class="btn btn-success btn-add" type="button">
-                    <span class="glyphicon glyphicon-plus">+</span>
-                  </button>
-                </span>
-              </div>
+            <div class="form-group col-6 col-sm-6">
+              <input type="text" class="form-control rounded-0" id="nombreTitular" placeholder="Nombre">
             </div>
-
-            <div class='col-12 col-sm-12 py-3'>
-              <div class="form-group mb-0">
-                <label for="textAlergias">Escríbenos aquí si tienes alguna alergia o necesidad de un menú
-                  especial</label>
-                <textarea class="form-control" id="textAlergias"
-                  placeholder="Alergia so necesidad de menú especial"> </textarea>
-              </div>
+            <div class="form-group col-6 col-sm-6">
+              <input type="text" class="form-control rounded-0" id="apellidoTitular" placeholder="Apellidos">
             </div>
-
-
-            <!--
-            nombre
-            apellidos
-            invitado +
--->
-            <button type="submit" class="btn btn-primary rounded-0 mt-3">Enviar</button>
-          </form>
-        </div>
+          </div>
+          <div id='guests'><!-- to add guest --></div>
+          <span class="input-group-btn col-12 col-sm-1">
+            <button class="btn btn-success btn-add rounded-0 mt-3" type="button">
+              <span class="glyphicon glyphicon-plus"> Añadir invitado +</span>
+            </button>
+          </span>
+        
+          <div class='form-row'>
+            <div class="form-group col-12 py-3 mb-0">
+              <label for="textAlergias">Escríbenos aquí si tienes alguna alergia o necesidad de un menú
+                especial</label>
+              <textarea class="form-control rounded-0" id="textAlergias"
+                placeholder="Alergia so necesidad de menú especial"> </textarea>
+            </div>
+          </div>
+        
+          <button type="submit" class="btn btn-primary rounded-0 mt-3">Enviar</button>
+        </form>
       </div>
     </div>
   </div>

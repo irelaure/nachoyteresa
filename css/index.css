@@ -10,7 +10,7 @@ body {
   font-size: 0.8rem;
 }
 
-header {
+nav#header {
   text-transform: uppercase;
 }
 
@@ -18,10 +18,6 @@ h2 {
   font-size: 1rem;
   text-align: center;
   font-style: bold;
-}
-
-.section-title {
-  text-transform: uppercase;
 }
 
 .gray {
@@ -60,6 +56,24 @@ a:hover
 
 #monico {
   width: 10em;
+}
+
+.guest {
+  border: 1px solid #eee;
+  background-color: white;
+  position: relative;
+}
+
+.guest i.btn-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.guest i.btn-remove:hover {
+  opacity: 1;
 }
 
 footer {
