@@ -15,6 +15,18 @@ body {
   background-color: white!important;
 }
 
+#landing {
+  height: 600px;
+  background-image: url('images/hipos.jpg');
+  background-position: top center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#note {
+  position: absolute;
+}
 
 h2 {
   font-size: 1rem;
