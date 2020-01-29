@@ -21,7 +21,8 @@ h2 {
 }
 
 .gray {
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
+
 }
 
 .btn {
@@ -32,6 +33,10 @@ h2 {
 .btn:hover{
   background-color: #008793;
   border-color: #008793;
+}
+
+.upper {
+  text-transform: uppercase;
 }
 
 a {
@@ -56,6 +61,10 @@ a:hover
 
 #monico {
   width: 10em;
+}
+
+#landing {
+  background-image: url("../images/hipos.jpg");  
 }
 
 .guest {
@@ -89,4 +98,14 @@ footer {
 .glyphicon
 {
     /* font-size: 12px; */
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 1.0);
+  background-image: url("../images/separator.png");
+  width: 100%;
+  
 }
