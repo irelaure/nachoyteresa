@@ -22,7 +22,6 @@ h2 {
 
 .gray {
   /* background-color: #f7f7f7; */
-
 }
 
 .btn {
@@ -37,6 +36,10 @@ h2 {
 
 .upper {
   text-transform: uppercase;
+}
+
+.form-control {
+  font-size: 0.8rem;
 }
 
 a {

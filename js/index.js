@@ -23,7 +23,11 @@ $(document).ready(function () {
                       <label class='form-check-label' for='defaultCheck1'>Servicio de traslado en autobús</label>\
                         </div>\
                   </div>\
-                </div>").hide();
+                <div class='form-group col-12'>\
+                <label for='textAlergias'>Escríbenos aquí si tienes alguna alergia o necesidad de un menú\
+                  especial</label>\
+                <textarea class='form-control rounded-0' id='textAlergias'</textarea>\
+                ").hide();
 
     $('#guests').append(item);
     item.show('slow');
