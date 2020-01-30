@@ -16,7 +16,6 @@ body {
 }
 
 #landing {
-  height: 600px;
   background-image: url('images/hipos.jpg');
   background-position: top center;
   background-repeat: repeat;
@@ -80,10 +79,6 @@ a:hover
   width: 10em;
 }
 
-#landing {
-  background-image: url("../images/hipos.jpg");  
-}
-
 .guest {
   border: 1px solid #eee;
   background-color: white;
@@ -121,3 +116,6 @@ footer {
   border-color: white;
 }
 
+.img-fluid {
+  width: 100%;
+}
