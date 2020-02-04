@@ -23,6 +23,10 @@ body {
   background-size: cover;
 }
 
+.has-error input {
+  border-color: crimson;
+}
+
 #note {
   position: absolute;
 }

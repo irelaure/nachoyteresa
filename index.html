@@ -11,11 +11,11 @@
   <link rel="icon" media="(prefers-color-scheme:light)" href="favicon-light.ico" type="image/png" />
 
   <link rel='stylesheet' href='css/bootstrap.min.css' media='screen' id="bootstrap-css">
-  <link rel='stylesheet' href='css/index.css' media='screen'>
+  <link rel='stylesheet' href='css/index.css?v=1.1' media='screen'>
 
   <script src='js/jquery-3.4.1.min.js'></script>
   <script src='js/bootstrap.bundle.min.js'></script>
-  <script src='js/index.js?v=1.1'></script>
+  <script src='js/index.js?v=1.5'></script>
   <script src="https://kit.fontawesome.com/ac79f6b96e.js" crossorigin="anonymous"></script>
 
 </head>
@@ -205,27 +205,24 @@
           <p>Si quieres, puedes confirmar tu asistencia y la de tus acompañantes aquí:</p>
         </div>
         <form class='col-12 text-center'>
-          <div class='form-row justify-content-center'>
+          <div id='primary_guest' class='form-row justify-content-center'>
             <div class="form-group col-6 col-sm-6">
-              <input type="text" class="form-control rounded-0" id="nombreTitular" placeholder="Nombre">
+              <input type="text" class="form-control rounded-0 property required" name='name' id="nombreTitular" placeholder="Nombre*">
             </div>
             <div class="form-group col-6 col-sm-6">
-              <input type="text" class="form-control rounded-0" id="apellidoTitular" placeholder="Apellidos">
+              <input type="text" class="form-control rounded-0 property required" name='surname' id="apellidoTitular" placeholder="Apellidos*">
             </div>
             <div class="form-group col-6 col-sm-6">
-              <input type="email" class="form-control rounded-0 " id="emailTitular" aria-describedby="emailHelp"
-                placeholder="Correo electrónico">
+              <input type="email" class="form-control rounded-0 property required" name='email' id="emailTitular" aria-describedby="emailHelp"
+                placeholder="Correo electrónico*">
               <small id="emailHelp" class="form-text text-muted"></small>
             </div>
             <div class="form-group col-6 col-sm-6">
-              <input class="form-control" type="tel" placeholder="Número de Teléfono" id="phoneTitular">
+              <input class="form-control rounded-0 property required" name='phone' type="tel" placeholder="Número de Teléfono*" id="phoneTitular">
             </div>
             <div class="form-group col-12">
-              <label for="textAlergias">Escríbenos aquí si tienes alguna alergia o necesidad de un menú
-                especial</label>
-              <textarea class="form-control rounded-0" id="textAlergias"
-                placeholder="Alergias o necesidad de menú especial">
-              </textarea>
+              <label for="textAlergias">Escríbenos aquí si tienes alguna alergia o necesidad de un menú especial</label>
+              <textarea class="form-control rounded-0 property" id="textAlergias" name='alergies' placeholder="Alergias o necesidad de menú especial"></textarea>
             </div>
           </div>
           <div id='guests'>
@@ -236,7 +233,7 @@
               <span class="glyphicon glyphicon-plus"> Añadir invitado +</span>
             </button>
           </span>
-          <button type="submit" class="btn btn-primary rounded-0 mt-3">Enviar</button>
+          <button id='send' type="button" class="btn btn-primary rounded-0 mt-3">Enviar</button>
         </form>
       </div>
     </div>
