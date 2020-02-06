@@ -10,9 +10,13 @@ $(document).ready(function () {
       var invitees = Object.values(respuesta);
       var partners = Object.values(respuesta).filter(g => g.partners).map(g => g.partners).flat();
       var everybody = invitees.concat(partners);
+      var alergies = everybody.filter(g => g.alergies);
+      var bus = everybody.filter(g => g.autobus);
       
       paintTableSections(respuesta, _review);
-      paintTableTotal(everybody);
+      paintTableTotal(everybody, '#table_allguest');
+      paintTableTotal(bus, '#table_onlybus');
+      paintTableTotal(alergies, '#table_onlyalergies');
     },
     error: function () {
       console.log("No se ha podido obtener la información");
@@ -101,9 +105,9 @@ function paintTableSections(respuesta, _review) {
   $('#guest').html(_content);
 }
 
-function paintTableTotal(everybody) {
+function paintTableTotal(everybody, tableclass) {
 
-  $('#table_allguest, #table_onlybus, #table_onlyalergies').bootstrapTable({
+  $(tableclass).bootstrapTable({
     columns: [{
       field: 'name',
       title: 'Nombre'
