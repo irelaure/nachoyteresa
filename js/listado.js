@@ -101,8 +101,7 @@ function paintTableSections(respuesta, _review) {
         _content += '</p>';
       });
     }
-    _content += '   <div class="text-right"><a href="#" class="btn btn-danger">Eliminar</a></div>\
-                  </div>\
+    _content += '   </div>\
                 </div>';
   });
 
