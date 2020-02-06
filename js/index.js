@@ -101,23 +101,13 @@ $(document).ready(function () {
       primary_guest['partners'] = guests;
       console.log(primary_guest);
 
-      // No consigo añadir el elemento en la base de datos 
-      // paso de autorización por post ¿malo?
       $.ajax({
-        url: "https://nachoyteresa-f82bd.firebaseio.com/rsvp/",
-        // url: "https://nachoyteresa-f82bd.firebaseio.com/rsvp/?auth=qSVTlCu91v6Z0luFKkraXyqIvzVn7Z2piRhJY66J",
-        beforeSend: function (xhr) {
-          // xhr.setRequestHeader("Authorization", "Basic " + btoa("username:password"));
-        },
+        url: "https://nachoyteresa-f82bd.firebaseio.com/rsvp.json?auth=qSVTlCu91v6Z0luFKkraXyqIvzVn7Z2piRhJY66J",
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
-        data: { 
-          auth: 'qSVTlCu91v6Z0luFKkraXyqIvzVn7Z2piRhJY66J',
-          foo: primary_guest
-        },
+        data: JSON.stringify(primary_guest),
         success: function (data) {
-          // alert(JSON.stringify(data));
           $(this).html('Enviado');
           console.log(data);
         },
@@ -125,7 +115,6 @@ $(document).ready(function () {
           alert("Cannot get data");
         }
       });
-
     } catch (err) {
       alert(err);
       $(this).html('Reintentar');
