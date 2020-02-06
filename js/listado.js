@@ -83,7 +83,7 @@ function paintTableSections(respuesta, _review) {
                   <div class="card-body">\
                   <p class="card-text"><strong>'+ guest_bus + '</strong></p>';
     if (guest_alergies)
-      _content += '<p class="card-text">ALERGIAS: ' + guest_alergies + '</p>';
+      _content += '<p class="card-text">Alergias: ' + guest_alergies + '</p>';
 
     if (guest['partners']) {
       _content += '<p class="card-text"><strong>INVITADOS:</strong></p>';
@@ -91,8 +91,14 @@ function paintTableSections(respuesta, _review) {
         partner_bus = partner['autobus'] ? 'Bus sí' : 'Bus no';
         partner_alergies = partner['alergies'] ? partner['alergies'] : '';
         _content += '<p class="invitado ml-3 my-2">\
-                      - ' + partner['name'] + ' ' + partner['surname'] + '\
-                      / ' + partner_alergies + ' / ' + partner_bus + '</p>';
+                      - ' + partner['name'] + ' ' + partner['surname'];
+        
+        _content += '<p class="ml-5 my-2">' + partner_bus + '</p>';
+        if (partner_alergies) {
+          _content += '<p class="ml-5 my-2">\
+          Alergias: ' + partner_alergies + '</p>';
+        }
+        _content += '</p>';
       });
     }
     _content += '   <div class="text-right"><a href="#" class="btn btn-danger">Eliminar</a></div>\
