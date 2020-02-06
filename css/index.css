@@ -115,3 +115,38 @@ footer {
 .img-fluid {
   width: 100%;
 }
+
+.asistente .card-header {
+  border-bottom: none;
+  font-size: 1rem !important;
+}
+
+.asistente .card-body {
+  overflow: hidden;
+  height: 0;
+  padding: 0;
+  transition: all 0.45s ease 0;
+}
+
+.asistente .card-body .card-title {
+  font-size: 1rem;
+}
+
+.asistente .card-body.show {
+  height: 300px;
+  padding: 25px;
+}
+
+.see {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  transition: all 0.25s ease 0;
+}
+.see.clicked {
+  transform: rotate(45deg);
+}
+/* 
+.invitado {
+
+} */
