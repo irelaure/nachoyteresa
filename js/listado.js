@@ -12,24 +12,25 @@ $(document).ready(function () {
       var everybody = invitees.concat(partners);
       
       paintTableSections(respuesta, _review);
-      //paintTableTotal(everybody);
+      paintTableTotal(everybody);
     },
     error: function () {
       console.log("No se ha podido obtener la información");
     }
   });
 
-  $('#table').on('click', '.see', function () {
+  $('#guest').on('click', '.card-header', function () {
 
-    if ($(this).hasClass('clicked')) {
-      $('#table .card-body').removeClass('show');
-      $('#table .see').removeClass('clicked');
+    _button = $(this).find('.see');
+    if (_button.hasClass('clicked')) {
+      $('#guest .card-body').removeClass('show');
+      $('#guest .see').removeClass('clicked');
     } else {
-      $('#table .card-body').removeClass('show');
-      $('#table .see').removeClass('clicked');
-      var _box = $(this).closest('.asistente');
+      $('#guest .card-body').removeClass('show');
+      $('#guest .see').removeClass('clicked');
+      var _box = _button.closest('.asistente');
       _box.find('.card-body').addClass('show');
-      $(this).addClass('clicked');
+      _button.addClass('clicked');
     }
   });
 
@@ -52,29 +53,10 @@ function getInfoPeople(respuesta) {
 
 }
 function paintHeader(_review) {
-  var _content_table = '<div class="row align-items-center">\
-  <div class="col-12 col-sm-6">\
-    <h1 class="text-center">Listado de asistentes</h1>\
-  </div>\
-  <div class="col-12 col-sm-6">\
-    <table class="table w-100">\
-      <tr>\
-        <th id="asistentes" class="text-center">Asistentes</th>\
-        <th id="totales" class="text-center">Asis. + Invitados</th>\
-        <th id="bus" class="text-center">Bus sí</th>\
-        <th id="alergieas" class="text-center">Alergias</th>\
-      </tr>\
-      <tr>\
-        <td class="text-center">' + _review['confirms'] + '</td>\
-        <td class="text-center">' + _review['total'] + '</td>\
-        <td class="text-center">' + _review['bussi'] + '</td>\
-        <td class="text-center">' + _review['alergies'] + '</td>\
-      </tr>\
-    </table >\
-  </div>\
-</div>';
-
-  $('#tablasistentes .container').html(_content_table);
+  $('#review_confirms').html(_review['confirms']);
+  $('#review_total').html(_review['total']);
+  $('#review_bussi').html(_review['bussi']);
+  $('#review_alergies').html(_review['alergies']);
 }
 
 function paintTableSections(respuesta, _review) {
@@ -116,11 +98,12 @@ function paintTableSections(respuesta, _review) {
                 </div>';
   });
   
-  $('#table ').html(_content);
+  $('#guest').html(_content);
 }
 
 function paintTableTotal(everybody) {
-  $('#table').bootstrapTable({
+
+  $('#table_allguest, #table_onlybus, #table_onlyalergies').bootstrapTable({
     columns: [{
       field: 'name',
       title: 'Nombre'

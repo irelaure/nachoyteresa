@@ -29,13 +29,58 @@
 
 <body>
 
-  <div id='tablasistentes' class='my-5'>
-    <div class='container'>
-    </div>
-  </div>
-
   <div id='tablacontent' class='ml-5 my-5 mr-5'>
-    <table id='table'class="col-12"></table>
+    <div class='container mb-5'>
+      <div class="row align-items-center">
+        <div class="col-12 col-sm-6">
+          <h1 class="text-center">Listado de asistentes</h1>
+        </div>
+        <div class="col-12 col-sm-6">
+          <table class="table w-100">
+            <tr>
+              <th id="asistentes" class="text-center">Asistentes</th>
+              <th id="totales" class="text-center">Asis. + Invitados</th>
+              <th id="bus" class="text-center">Bus sí</th>
+              <th id="alergies" class="text-center">Alergias</th>
+            </tr>
+            <tr>
+              <td id="review_confirms" class="text-center"></td>
+              <td id="review_total" class="text-center"></td>
+              <td id="review_bussi" class="text-center"></td>
+              <td id="review_alergies" class="text-center"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link rounded-0 active" id="guest-tab" data-toggle="tab" href="#guest" role="tab" aria-controls="guest" aria-selected="true">Asistentes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link rounded-0" id="allguest-tab" data-toggle="tab" href="#allguest" role="tab" aria-controls="allguest" aria-selected="false">Asis. + Invitados</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link rounded-0" id="bussi-tab" data-toggle="tab" href="#bussi" role="tab" aria-controls="bussi" aria-selected="false">Bus sí</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link rounded-0" id="alergiesT-tab" data-toggle="tab" href="#alergiesT" role="tab" aria-controls="alergiesT" aria-selected="false">Alergias</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade p-3 show active" id="guest" role="tabpanel" aria-labelledby="guest-tab">
+      </div>
+      <div class="tab-pane fade p-3" id="allguest" role="tabpanel" aria-labelledby="allguest-tab">
+        <table id='table_allguest' class="col-12"></table>
+      </div>
+      <div class="tab-pane fade p-3" id="bussi" role="tabpanel" aria-labelledby="bussi-tab">
+        <table id='table_onlybus' class="col-12"></table>
+      </div>
+      <div class="tab-pane fade p-3" id="alergiesT" role="tabpanel" aria-labelledby="alergiesT-tab">
+        <table id='table_onlyalergies' class="col-12"></table>
+      </div>
+    </div>
+    
   </div>
 
   <footer>

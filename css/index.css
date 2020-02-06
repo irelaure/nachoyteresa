@@ -118,6 +118,7 @@ footer {
 .asistente .card-header {
   border-bottom: none;
   font-size: 1rem !important;
+  cursor: pointer;
 }
 
 .asistente .card-body {
