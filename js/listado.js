@@ -12,7 +12,7 @@ $(document).ready(function () {
       var everybody = invitees.concat(partners);
       var alergies = everybody.filter(g => g.alergies);
       var bus = everybody.filter(g => g.autobus);
-      
+
       paintTableSections(respuesta, _review);
       paintTableTotal(everybody, '#table_allguest');
       paintTableTotal(bus, '#table_onlybus');
@@ -70,38 +70,36 @@ function paintTableSections(respuesta, _review) {
 
     _count_partners = guest['partners'] ? guest['partners'].length : 0;
     guest_bus = guest['autobus'] ? 'Bus sí' : 'Bus no';
-    guest_alergies = guest['alergies'] ? guest['alergies'] : 'Sin alergias';
+    guest_alergies = guest['alergies'] ? guest['alergies'] : '';
     _content += '<div class="card my-3 asistente">\
                   <h5 class="card-header">\
                     <div class="row">\
-                      <div class="col-4">' + guest['surname'] + ', ' + guest['name'] + '</div>\
-                      <div class="col-4 text-center">' + guest['phone'] + '</div>\
-                      <div class="col-4 text-center">' + _count_partners + ' inv. <i class="fa fa-plus see" aria-hidden="true"></i></div>\
+                      <div class="col-3">' + guest['name'] + ' ' + guest['surname'] + '</div>\
+                      <div class="col-3">' + guest['email'] + '</div>\
+                      <div class="col-3 text-center">' + guest['phone'] + '</div>\
+                      <div class="col-3 text-center">' + _count_partners + ' inv. <i class="fa fa-plus see" aria-hidden="true"></i></div>\
                     </div>\
                   </h5>\
                   <div class="card-body">\
-                    <h5 class="card-title">guidoperalta26@gmail.com</h5>\
-                    <h5 class="card-title">' + guest_bus + '</h5>\
-                    <p class="card-text"><strong>ALERGIAS:</strong></p>\
-                    <p class="card-text ml-3">' + guest_alergies + '</p>\
-                    <p class="card-text"><strong>INVITADOS:</strong></p>';
+                  <p class="card-text"><strong>'+ guest_bus + '</strong></p>';
+    if (guest_alergies)
+      _content += '<p class="card-text">ALERGIAS: ' + guest_alergies + '</p>';
 
     if (guest['partners']) {
+      _content += '<p class="card-text"><strong>INVITADOS:</strong></p>';
       $.each(guest['partners'], function (index, partner) {
         partner_bus = partner['autobus'] ? 'Bus sí' : 'Bus no';
-        partner_alergies = partner['alergies'] ? partner['alergies'] : 'Sin alergias';
+        partner_alergies = partner['alergies'] ? partner['alergies'] : '';
         _content += '<p class="invitado ml-3 my-2">\
-                      - ' + partner['surname'] + ', ' + partner['name'] + '\
+                      - ' + partner['name'] + ' ' + partner['surname'] + '\
                       / ' + partner_alergies + ' / ' + partner_bus + '</p>';
       });
-    } else {
-      _content += '<p class="invitado ml-3 my-2">- Sin invitados';
     }
     _content += '   <div class="text-right"><a href="#" class="btn btn-danger">Eliminar</a></div>\
                   </div>\
                 </div>';
   });
-  
+
   $('#guest').html(_content);
 }
 
