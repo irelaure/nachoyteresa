@@ -99,7 +99,6 @@ $(document).ready(function () {
       });
 
       primary_guest['partners'] = guests;
-      console.log(primary_guest);
 
       $.ajax({
         url: "https://nachoyteresa-f82bd.firebaseio.com/rsvp.json?auth=qSVTlCu91v6Z0luFKkraXyqIvzVn7Z2piRhJY66J",
@@ -108,13 +107,15 @@ $(document).ready(function () {
         contentType: 'application/json',
         data: JSON.stringify(primary_guest),
         success: function (data) {
-          $(this).html('Enviado');
-          console.log(data);
+          $('#formularioasistencia #guests').html('');
+          $('#formularioasistencia')[0].reset();
+          alert('Asistencia enviada correctamente');
         },
         error: function () {
           alert("Cannot get data");
         }
       });
+
     } catch (err) {
       alert(err);
       $(this).html('Reintentar');
