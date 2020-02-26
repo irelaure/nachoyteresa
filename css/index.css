@@ -14,6 +14,13 @@ body {
   background-color: white!important;
 }
 
+#landing {
+  background-image: url('../images/hipos.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .has-error input {
   border-color: crimson;
 }
