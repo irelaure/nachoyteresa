@@ -1,12 +1,13 @@
 @font-face {
-  font-family: 'Monserrat';
-  src: url('../fonts/Montserrat/Montserrat-Regular.woff');
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway/Raleway-Regular.ttf');
   font-weight: 400;
 }
 
 body {
-  font-family: 'Monserrat';
+  font-family: 'Raleway';
   font-size: 0.8rem;
+  font-style: normal;
 }
 
 #header {
@@ -19,6 +20,7 @@ body {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  height:500px;
 }
 
 .has-error input {
