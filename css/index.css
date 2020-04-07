@@ -23,6 +23,10 @@ body {
   height:500px;
 }
 
+#contactImage {
+  width:100%;
+}
+
 .has-error input {
   border-color: crimson;
 }
